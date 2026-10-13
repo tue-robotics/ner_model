@@ -65,3 +65,4 @@ Then when it says "state your command":
 ```bash
 rostopic pub /hero/hmi/string std_msgs/String "data: 'get the coke from the dining table'" --once
 ```
+
