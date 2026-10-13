@@ -40,8 +40,8 @@ model doesn't use them.
 
 ## 1. Generate data
 
-Set the Azure credentials, either in the environment or in a `.env` file in
-`training/data_generation/` (never commit it):
+Load the OpenAI SKD client and connect it to your account. You can use OpenAI, Azure, or any other LLM provider that is supported by OpenAI SDK.
+We used Azure like this:
 
 ```
 AZURE_OPENAI_ENDPOINT=...
