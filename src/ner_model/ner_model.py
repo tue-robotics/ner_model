@@ -20,7 +20,7 @@ PACKAGE_DATA_DIR = Path(__file__).resolve().parent.parent.parent / "data"
 # also look in the shared location other tue-robotics packages use for models.
 SHARED_DATA_DIR = Path.home() / "data" / "ner_model"
 
-DOWNLOAD_HINT = "see docs/teammate_setup.md for where to download it"
+DOWNLOAD_HINT = "building the package ('tue-make ner_model') downloads it into the package's data/ directory"
 
 
 def data_dir_candidates():
@@ -56,8 +56,8 @@ def find_data_file(filename, explicit_path=None):
             return path
 
     raise FileNotFoundError(
-        "{} not found. Searched: {}. It is not distributed with the source, so it must be "
-        "installed manually; {}. Override the location with ${} or, under ROS, the "
+        "{} not found. Searched: {}. It is not distributed with the source; {}. "
+        "Override the location with ${} or, under ROS, the "
         "'ner_model/model_path' parameter.".format(
             filename, ", ".join(searched), DOWNLOAD_HINT, DATA_DIR_ENV_VAR
         )
