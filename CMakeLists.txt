@@ -11,8 +11,8 @@ catkin_package()
 # Skipped when they are already there, and in CI, which doesn't need them.
 if(NOT "$ENV{CI}" STREQUAL "true")
   file(
-    DOWNLOAD https://huggingface.co/PanosHuggingFace/bert-ner/resolve/main/model.pth ${PROJECT_SOURCE_DIR}/data/model.pth
-    EXPECTED_HASH "SHA256=07298a9f6c874396cbb29d3b7bde3f0b17a9b6c39893bd82547b498677b165fb"
+    DOWNLOAD https://github.com/tue-robotics/ner_model/releases/download/bert-ner-v1/bert-ner-v1.pth ${PROJECT_SOURCE_DIR}/data/model.pth
+    EXPECTED_HASH "sha256:07298a9f6c874396cbb29d3b7bde3f0b17a9b6c39893bd82547b498677b165fb"
     SHOW_PROGRESS
   )
 endif()
