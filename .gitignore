@@ -10,6 +10,8 @@ test
 train
 valid
 vocab.intent
+# ...but keep the unit tests
+!/test/
 # Generated training data (see docs/training.md)
 data/train.txt
 data/valid.txt
